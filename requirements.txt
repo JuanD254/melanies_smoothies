@@ -1,4 +1,4 @@
 # requirements.txt
 Python 3.8
-snowflake-snowpark-python==0.7.0
-streamlit
+snowflake-snowpark-python
+streamlit==1.38.0
