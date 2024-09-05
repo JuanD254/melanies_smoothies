@@ -1,5 +1,4 @@
 # requirements.txt
-pip 23.1
 Python 3.8
 snowflake-snowpark-python==0.7.0
 streamlit
