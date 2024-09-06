@@ -46,3 +46,8 @@ if fruits_list:
         st.success('Your Smoothie is ordered!', icon="✅")
         
     st.stop()
+
+# New selection for Fruityvice nutrition information
+import requests
+fruityvice_response = requests.get("https://www.fruityvice.com/api/fruit/watermelon")
+st.text(fruityvice_response)
