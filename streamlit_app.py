@@ -1,4 +1,5 @@
 # Import python packages
+import requests
 import streamlit as st
 from snowflake.snowpark.functions import col
 
@@ -31,6 +32,8 @@ if fruits_list:
     fruits_string = ''
     for fruit_chosen in fruits_list:
         fruits_string += fruit_chosen + ' '
+        fruityvice_response = requests.get("https://www.fruityvice.com/api/fruit/watermelon")
+        fv_df = st.dataframe(data=fruityvice_response.json(), use_container_width=True)
         
     #st.write(fruits_string)
 
@@ -47,8 +50,3 @@ if fruits_list:
         
     st.stop()
 
-# New selection for Fruityvice nutrition information
-import requests
-fruityvice_response = requests.get("https://www.fruityvice.com/api/fruit/watermelon")
-# st.text(fruityvice_response).json()
-fv_df = st.dataframe(data=fruityvice_response.json(), use_container_width=True)
