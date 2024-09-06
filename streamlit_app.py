@@ -28,7 +28,7 @@ pd_df = my_dataframe.to_pandas()
 fruits_list = st.multiselect(
     "Choose up to 5 fruits:",
     my_dataframe,
-    max_selections = 6
+    max_selections = 5
 )
 
 if fruits_list:    
